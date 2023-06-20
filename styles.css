@@ -1,3 +1,51 @@
-*{
-    font-family: 'Poppins';
+/*Variables*/
+:root{
+    --color-principal: #B1B2FF;
+    --color-secundario: #AAC4FF;
+    --color-fondos: #EEF1FF;
+    --color-texto: #52545e;
+    --color-tittle: #373d5e;
+}
+
+
+
+/*Estilos generales*/
+
+html{
+    font-size: 10px;
+}
+
+body{
+    width: 100%;
+    height: 100%;
+    font-family: 'Poppins','helvetica';
+    font-size: 1.5rem;
+    background-color: var(--color-fondos);
+    color: var(--color-texto);
+
+}
+
+h1, h2,h3, h4, h5, h6{
+    color: var(--color-tittle);
+}
+
+/*Estructura Principal*/
+
+.layout{
+    position: relative;
+    min-width: 1290px;
+    width: 75%;
+    height: 80vh;
+    min-height: 80vh;
+    margin: 10vh auto;
+
+    display: grid;
+    grid-template-areas: 
+        "aside content";
+    grid-template-columns: 30% 70%;
+
+    /*Sombra*/
+    border-radius: 4rem;
+    box-shadow: 0 0 100px rgba(0, 0, 0, 0.781);
+
 }
