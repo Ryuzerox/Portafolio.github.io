@@ -1,7 +1,7 @@
 /*Variables*/
 :root{
     --color-principal: #B1B2FF;
-    --color-secundario: #AAC4FF;
+    --color-secundario: #B1B2FF;
     --color-fondos: #EEF1FF;
     --color-texto: #52545e;
     --color-tittle: #373d5e;
@@ -22,12 +22,22 @@ body{
     font-size: 1.5rem;
     background-color: var(--color-fondos);
     color: var(--color-texto);
-
+    overflow: hidden;
 }
 
 h1, h2,h3, h4, h5, h6{
     color: var(--color-tittle);
 }
+
+/*Imagen de fondo*/
+body{
+    background-color: rgba(0, 0, 0, 0.212) ;
+    background-image: url(./assets/img/fondo.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: -20 -120;
+}
+
 
 /*Estructura Principal*/
 
@@ -48,4 +58,53 @@ h1, h2,h3, h4, h5, h6{
     border-radius: 4rem;
     box-shadow: 0 0 100px rgba(0, 0, 0, 0.781);
 
+}
+
+
+/*Barra Lateral azul*/
+.layout__aside{
+    grid-area: aside;
+
+    border-radius: 4rem 0 0 4rem;
+    overflow: auto;
+    overflow-x: hidden;
+}
+
+
+.aside__user-info{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    min-height: 100%;
+    min-width: 30rem;
+    background-color: var(--color-secundario);
+    color: var(--color-principal);
+}
+
+.user-info__container-image{
+    position: relative;
+    display: inline-block;
+    margin-top: 7rem;
+    background-color: var(--color-principal);
+    border: 3px solid var(--color-principal);
+    border-radius: 10rem;
+    width: 200px;
+    height: 200px;
+    position: relative;
+    overflow: hidden;
+    
+
+}
+
+.user-info__image{
+    width: 100%;
+    transform: translate(0%, -10%) scale(0.9);
+    
+}
+/*Contenido principal*/
+
+.layout__content{
+    grid-area: content;
 }
