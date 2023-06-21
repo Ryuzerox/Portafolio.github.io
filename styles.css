@@ -129,7 +129,7 @@ body{
 
 
 .user-info__job{
-    font-size: 1.7re;
+    font-size: 1.7rem;
     font-weight: 200;
     color: var(--color-fondos);
 }
@@ -145,26 +145,26 @@ body{
     margin-top: 2rem;
     text-align: center;
     display: flex;
-    flex-direction: row;
+    flex-direction: row; 
 }
 
+.social__icon{
+    color: white;
+}
 .social__option{
+    
     height: 3rem;
     width: 3rem;
     font-size: 1.8rem;
     line-height: 3.2rem;
     opacity: 0.9;
     border-radius: 3rem;
-    transition: all 0.3s ease-in-out ;
+    transition: all 0.3s ease-in-out;
 }
 
 .social__option:hover{
     opacity: 1;
     background-color: rgba(183, 0, 255, 0.233);
-}
-
-.layout__menu{
-    display: none;
 }
 
 .user-info__footer{
@@ -200,5 +200,102 @@ body{
 
 .layout__content{
     grid-area: content;
+    height: 100%;
+    min-height: 100%;
+    background-color: var(--color-principal);
+    border-radius: 0 10rem 10rem 0;
 }
 
+
+.content__page{
+    min-height: 100%;
+    background-color: var(--color-fondos);
+    border-radius: 3.2rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.page__name{
+    font-size: 6rem;
+    margin-bottom: 1rem;
+}
+
+.page__job{
+    font-size: 2.1rem;
+    font-weight: lighter;
+    color: var(--color-texto);
+}
+
+/*Menu navegacion lateral*/
+
+.layout__menu{
+    display: block;
+    position: absolute;
+    top: 0;
+    right: -105px;
+    min-width: 11rem;
+    
+}
+
+
+.menu__list{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 60%;
+    min-height: 32rem;
+    padding: 2rem 0;
+    margin-left: 2.5rem;
+    background-color: var(--color-principal);
+    box-shadow: 0 0 3rem -0.5rem rgba(160, 92, 250, 0.973);
+    border-radius: 5rem;
+}
+
+.menu__option{
+    display: block;
+    width: 100%;
+    text-align: center;
+    
+}
+
+
+.menu__icon{
+    color: var(--color-fondos);
+    font-size: 2.8rem;
+    transition: 0.3s ease-in-out;
+}
+
+.menu__option:hover .menu__icon{
+    color: var(--color-texto);
+    scale: 1.2;
+
+}
+
+
+
+.menu__overlay{
+    position: absolute;
+    right: 0;
+    padding: 0.5rem 1rem;
+    margin-top: -3rem;
+    opacity: 0;
+    display: block;
+    padding-inline-start: 0.5rem 1rem;
+    color: var(--color-fondos);
+    background-color: var(--color-principal);
+    white-space: nowrap;
+    transition: all 0.3s ease-in-out;
+    border-radius: 2rem;
+
+
+}
+.menu__option:hover .menu__overlay:hover{
+    opacity: 1;
+    right: 100%;
+}
